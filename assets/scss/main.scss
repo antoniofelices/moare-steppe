@@ -1,0 +1,27 @@
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+
+@import 'variables';
+@import 'plugins/mixins';
+
+@import 'plugins/accessibility';
+@import 'plugins/html';
+@import 'plugins/type';
+@import 'plugins/structure';
+@import 'plugins/header';
+@import 'plugins/footer';
+@import 'plugins/classes';
+@import 'plugins/classes-wordpress';
+@import 'plugins/forms';
+@import 'plugins/tables';
+@import 'plugins/comments';
+@import 'plugins/pages';
+@import 'plugins/plugins';

@@ -1,0 +1,26 @@
+/*
+ *
+ * Type
+ *
+ */
+
+// Typography
+// If need border bottom, have to add styles here.
+// a {
+// 	color: var(--wp--preset--color--link-color);
+// 	text-decoration: $link-decoration;
+// 	&:hover, &:active, &:focus {
+// 		color: $link-hover-color;
+// 		text-decoration: $link-hover-decoration;
+// 	}
+// }
+
+ol,
+ul {
+	margin-bottom: $magic-number;
+	padding-left: $gutter;
+	ol,
+	ul {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "moare-steppe",
+	"description": "Moare theme FSE. Characterized by grassland plains without trees except near rivers and lakes.",
+	"version": "1.0.0",
+	"license": "GPL-3.0-or-later",
+	"devDependencies": {
+		"gulp": "^5.0.0",
+		"gulp-sass": "^5.1.0",
+		"sass": "^1.79.4"
+	}
+}

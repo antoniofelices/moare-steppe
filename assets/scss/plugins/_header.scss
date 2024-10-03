@@ -1,0 +1,75 @@
+/*
+ *
+ * Header
+ *
+ */
+
+ .ms-site-header {
+
+	// Title section.
+	.wp-block-site-title {
+		a {
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	// Menu item. li element. current item.
+	.current-menu-item {
+		a {
+			@include borderBB();
+		}
+	}
+
+	// Menu item link. a element.
+	a.wp-block-navigation-item__content {
+		text-decoration: none;
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+
+}
+
+.ms-site-header.scrolled {
+	background-color: var(--wp--preset--color--white);
+}
+
+// Desktop displays
+@include breakpoint( $responsive-menu-break ) {
+
+	.ms-site-header {
+
+		// Title section.
+		.wp-block-site-title {
+			a {
+				&:hover, &:active, &:focus {
+					text-decoration: none;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		// Menu item link. a element.
+		a.wp-block-navigation-item__content {
+			text-decoration: none;
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+
+	}
+
+}

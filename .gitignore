@@ -1,0 +1,13 @@
+# Sass cache
+.sass-cache/
+
+# Node modules
+node_modules/
+
+# Dist dir
+assets/stylesheets/
+
+# Others
+.DS_Store
+.Icon
+.vscode

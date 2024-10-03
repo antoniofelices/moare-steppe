@@ -1,0 +1,25 @@
+/*
+ *
+ * Pages
+ *
+ */
+
+
+@include breakpoint( $responsive-menu-break ) {
+
+	// Page header inverse
+	body.page-template-page-header-inverse,
+	body.page-template-page-landing {
+		.ms-site-header {
+			background-color: transparent;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		.ms-site-header.scrolled {
+			background-color: var(--wp--preset--color--white);
+		}
+	}
+
+}

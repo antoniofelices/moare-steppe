@@ -1,0 +1,66 @@
+/*
+ *
+ * Forms
+ *
+ */
+
+input,
+select,
+textarea {
+	background-color: var(--wp--preset--color--white);
+	border-radius: 0;
+	width: 100%;
+	padding: calc($magic-number / 2);
+	@include borderB( $color: var(--wp--preset--color--gray-lighter) );
+}
+
+input,
+textarea {
+	&::-moz-placeholder,
+	&::-webkit-input-placeholder,
+	&::-ms-input-placeholder,
+	&::placeholder {
+		color: $gray;
+		opacity: 1;
+	}
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+}
+
+// Search Form
+.widget_search {
+	form {
+		position: relative;
+	}
+	input[type="search"] {
+		padding-right: 6rem;
+	}
+	input[type="submit"] {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.search-form {
+	position: relative;
+	input[type="search"] {
+		padding-right: 6rem;
+	}
+	input[type="submit"] {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+	}
+}

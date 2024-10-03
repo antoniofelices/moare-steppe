@@ -1,0 +1,49 @@
+/*
+ *
+ * Accessibility. Genesis accessibility.
+ * If add_theme_support genesis-accessibility
+ *
+ */
+
+// Screen Reader Text.
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+	border: 0;
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.search input[type="submit"]:focus,
+.widget_search input[type="submit"]:focus  {
+	clip-path: none;
+	height: auto;
+	width: auto;
+	position: static;
+	display: block;
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--wp--custom--typography--font-weight--bold);
+	padding: calc($magic-number / 2) $magic-number;
+	color: var(--wp--preset--color--gray-dark);
+	background: var(--wp--preset--color--white);
+	z-index: 100000; /* Above WP toolbar. */
+	text-decoration: none;
+	box-shadow: 0 0 2px 2px rgba(var(--wp--preset--color--black),.6);
+}
+
+.more-link {
+	position: relative;
+}
+
+// Don't display outline on focus.
+:focus {
+	outline: 1px dotted var(--wp--preset--color--link-color);
+}

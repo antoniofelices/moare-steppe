@@ -1,0 +1,149 @@
+/*
+ *
+ * Mixins
+ *
+ */
+
+// Media Queries
+@mixin breakpoint( $breakpoint ) {
+	@if map-has-key( $breakpoints, $breakpoint) {
+		@media ( min-width: #{ map-get( $breakpoints, $breakpoint ) }) {
+			@content;
+		}
+	}
+	@else if type_of( $breakpoint)==number and unit( $breakpoint)==px or unit( $breakpoint)==em or unit( $breakpoint)==rem {
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	}
+	@else {
+		@warn "Unfortunately no value could be retrieved from `#{$breakpoint}`. "+"Please make sure it is defined in `$breakpoints` map, or it is a valid number with supported unit of px, em or rem.";
+	}
+}
+
+// Boders
+@mixin borderB( $width: 1px, $style: solid, $color: currentColor ) {
+	border: $width $style $color;
+}
+
+@mixin borderBT( $width: 1px, $style: solid, $color: currentColor ) {
+	border-top: $width $style $color;
+}
+
+@mixin borderBR( $width: 1px, $style: solid, $color: currentColor ) {
+	border-right: $width $style $color;
+}
+
+@mixin borderBB( $width: 1px, $style: solid, $color: currentColor ) {
+	border-bottom: $width $style $color;
+}
+
+@mixin borderBL( $width: 1px, $style: solid, $color: currentColor ) {
+	border-left: $width $style $color;
+}
+
+// Clearfix
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Wrap
+@mixin wrap() {
+	@include breakpoint( md ) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $grid-max-width-md;
+		width: 100%;
+	}
+	@include breakpoint( lg ){
+		max-width: $grid-max-width-lg;
+	}
+	@include breakpoint( xl ){
+		max-width: $grid-max-width-xl;
+	}
+	@include breakpoint( 2xl ){
+		max-width: $grid-max-width-2xl;
+	}
+	@include breakpoint( 3xl ){
+		max-width: $grid-max-width-3xl;
+	}
+}
+
+// Narrow
+@mixin narrow() {
+	@include breakpoint( $responsive-menu-break ){
+		margin-left: auto;
+		margin-right: auto;
+		width: calc($gutter * 45);
+	}
+}
+
+// Narrow with out margin
+@mixin narrow-without-margins() {
+	@include breakpoint( md ){
+		max-width: calc($gutter * 45);
+	}
+	@include breakpoint( $responsive-menu-break ){
+		max-width: calc($gutter * 60);
+	}
+}
+
+// List unstyled.
+@mixin list-unstyled() {
+	margin-left: 0;
+	padding-left: 0;
+	li {
+		list-style: none;
+	}
+}
+
+// List inline.
+@mixin list-inline() {
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		list-style: none;
+		+ li {
+			margin-left: calc($gutter / 2);
+		}
+	}
+}
+
+// Don't show.
+%dontshow {
+	position: absolute !important;
+	top: -9999rem;
+	left: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+// Table.
+%table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	margin-bottom: $magic-number;
+	margin-top: $magic-number;
+	width: 100%;
+	td,
+	th {
+		padding: calc($magic-number / 4) $gutter;
+		@include borderB( $color: var(--wp--preset--color--gray-light) );
+	}
+	th {
+		background-color: var(--wp--preset--color--gray-dark);
+		color: var(--wp--preset--color--white);
+		font-weight: var(--wp--custom--typography--font-weight--bold);
+		text-align: left;
+	}
+}

@@ -1,0 +1,25 @@
+/*
+ *
+ * Structure
+ *
+ */
+
+// Remove margin top default WordPress.
+main {
+	margin-top: 0;
+}
+
+// Wrap.
+.ms-wrap {
+	@include wrap();
+}
+
+// Narrow.
+.ms-narrow {
+	@include narrow();
+}
+
+// Narrow without margins.
+.ms-narrow-without-margins {
+	@include narrow-without-margins();
+}

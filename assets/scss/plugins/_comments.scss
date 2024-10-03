@@ -1,0 +1,53 @@
+/*
+ *
+ * Comments.
+ *
+ */
+
+.entry-comments {
+	ol {
+		@include list-unstyled();
+	}
+	.comment-header {
+		margin-bottom: $magic-number;
+		overflow: hidden;
+	}
+	.comment-author {
+		margin: 0;
+	}
+	.comment .avatar {
+		float: left;
+		margin: 0 $gutter 0 0;
+	}
+	.says {
+		font-size: var(--wp--preset--font-size--small);
+		margin: 0;
+	}
+	.comment-meta {
+		font-size: var(--wp--preset--font-size--small);
+		margin: 0;
+	}
+	.comment-edit-link {
+		font-size: var(--wp--preset--font-size--small);
+		margin: 0;
+	}
+	.comment-reply {
+		clear: both;
+	}
+	.pingback {
+		margin-bottom: $magic-number;
+	}
+	.comment > article {
+		margin-bottom: $magic-number;
+	}
+	ul.children {
+		margin-left: $gutter;
+	}
+}
+
+.comment-respond {
+	.comment-reply-title > small,
+	.logged-in-as {
+		font-size: var(--wp--preset--font-size--small);
+	}
+}

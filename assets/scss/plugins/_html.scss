@@ -1,0 +1,56 @@
+/*
+ *
+ * HTML
+ *
+ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	vertical-align: middle;
+}
+
+address {
+	font-style: normal;
+}
+
+figure {
+	margin-right: 0;
+	margin-left: 0;
+	max-width: 100%;
+}
+
+summary {
+	display: flex;
+	justify-content: space-between;
+	&::marker {
+		content: '';
+	}
+	&:focus {
+		outline: none;
+	}
+	&:after {
+		content: '+';
+	}
+}
+
+details[open] {
+	summary {
+		&:after {
+			content: '-';
+		}
+	}
+}

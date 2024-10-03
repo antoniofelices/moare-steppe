@@ -1,0 +1,46 @@
+/**
+ * Moare Steppe.
+ *
+ * This file adds variables to sass.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+
+
+// Table of Contents
+//
+// Rithms
+// Colors
+// Medias
+
+// Rithms
+$magic-number:              1rem !default;
+$gutter:                    1rem !default;
+
+// Brand color.
+$brand-primary:             #b57442 !default;
+
+// Grayscale.
+$gray:                      #a39da3 !default;
+
+// Medias
+$breakpoints: ( sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px, 3xl: 1700px );
+
+$responsive-menu-break:     1024px !default;
+
+$grid-max-width-sm:         640px !default;
+$grid-max-width-md:         768px !default;
+$grid-max-width-lg:         1024px !default;
+$grid-max-width-xl:         1280px !default;
+$grid-max-width-2xl:        1536px !default;
+$grid-max-width-3xl:        1700px !default;
+
+// $grid-max-width-sm:         100vw !default;
+// $grid-max-width-md:         100vw !default;
+// $grid-max-width-lg:         100vw !default;
+// $grid-max-width-xl:         calc(100vw - #{ ( $gutter * 3 ) } ) !default;
+// $grid-max-width-2xl:        calc(100vw - #{ ( $gutter * 6 ) } ) !default;
+// $grid-max-width-3xl:        calc(100vw - #{ ( $gutter * 8 ) } ) !default;

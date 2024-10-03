@@ -1,0 +1,64 @@
+/*
+ *
+ * Custom classes
+ *
+ */
+
+// Custom blocks
+.ms-align-superposition {
+	.wp-block-column {
+		display: grid;
+		place-items: center;
+		grid-template-areas: "mssame";
+		figure, h2 {
+			grid-area: mssame;
+		}
+	}
+}
+
+.ms-align-center {
+	display: grid;
+	place-items: center;
+	@include breakpoint( $responsive-menu-break ) {
+		display: inherit;
+	}
+}
+
+// General
+.ms-clearfix {
+	@include clearfix();
+}
+
+.ms-dontshow {
+	@extend %dontshow;
+}
+
+// Images
+.ms-contains-image {
+	display: block;
+	&:hover, &:active, &:focus {
+		border: none;
+	}
+}
+
+// Lists
+.ms-list-unstyled {
+	@include list-unstyled();
+}
+
+.ms-list-inline {
+	@include list-inline();
+}
+
+// Text
+.ms-t-lg-r {
+	@include breakpoint( $responsive-menu-break ) {
+		text-align: right;
+	}
+}
+
+// Position
+.ms-mn {
+	position: relative;
+	z-index: 99;
+}

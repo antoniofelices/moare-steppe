@@ -284,6 +284,7 @@
 		},
 		"typography": {
 			"customFontSize": false,
+			"defaultFontSizes": false,
 			"dropCap": false,
 			"fontStyle": false,
 			"fontWeight": true,

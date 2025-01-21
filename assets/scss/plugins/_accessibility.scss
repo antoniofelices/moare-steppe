@@ -1,3 +1,5 @@
+@use "../variables";
+
 /*
  *
  * Accessibility. Genesis accessibility.
@@ -31,7 +33,7 @@
 	display: block;
 	font-size: var(--wp--preset--font-size--base);
 	font-weight: var(--wp--custom--typography--font-weight--bold);
-	padding: calc($magic-number / 2) $magic-number;
+	padding: calc(variables.$magic-number / 2) variables.$magic-number;
 	color: var(--wp--preset--color--gray-dark);
 	background: var(--wp--preset--color--white);
 	z-index: 100000; /* Above WP toolbar. */

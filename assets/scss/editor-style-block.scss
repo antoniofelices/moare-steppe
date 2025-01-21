@@ -9,6 +9,6 @@
  * @link    https://studiomoare.com
  */
 
-@import 'variables';
-@import 'plugins/mixins';
-@import 'plugins/classes';
+@use 'variables';
+@use 'plugins/mixins';
+@use 'plugins/classes';

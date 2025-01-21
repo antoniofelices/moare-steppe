@@ -1,3 +1,6 @@
+@use "../variables";
+@use "mixins";
+
 /*
  *
  * Pages
@@ -5,7 +8,7 @@
  */
 
 
-@include breakpoint( $responsive-menu-break ) {
+@include mixins.breakpoint( variables.$responsive-menu-break ) {
 
 	// Page header inverse
 	body.page-template-page-header-inverse,

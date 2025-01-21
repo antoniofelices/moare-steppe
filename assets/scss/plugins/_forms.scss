@@ -1,3 +1,6 @@
+@use "../variables";
+@use "mixins";
+
 /*
  *
  * Forms
@@ -10,8 +13,8 @@ textarea {
 	background-color: var(--wp--preset--color--white);
 	border-radius: 0;
 	width: 100%;
-	padding: calc($magic-number / 2);
-	@include borderB( $color: var(--wp--preset--color--gray-lighter) );
+	padding: calc(variables.$magic-number / 2);
+	@include mixins.borderB( $color: var(--wp--preset--color--gray-lighter) );
 }
 
 input,
@@ -20,7 +23,7 @@ textarea {
 	&::-webkit-input-placeholder,
 	&::-ms-input-placeholder,
 	&::placeholder {
-		color: $gray;
+		color: variables.$gray;
 		opacity: 1;
 	}
 }

@@ -1,3 +1,6 @@
+@use "../variables";
+@use "mixins";
+
 /*
  *
  * Custom classes
@@ -19,14 +22,14 @@
 .ms-align-center {
 	display: grid;
 	place-items: center;
-	@include breakpoint( $responsive-menu-break ) {
+	@include mixins.breakpoint( variables.$responsive-menu-break ) {
 		display: inherit;
 	}
 }
 
 // General
 .ms-clearfix {
-	@include clearfix();
+	@include mixins.clearfix();
 }
 
 .ms-dontshow {
@@ -43,16 +46,16 @@
 
 // Lists
 .ms-list-unstyled {
-	@include list-unstyled();
+	@include mixins.list-unstyled();
 }
 
 .ms-list-inline {
-	@include list-inline();
+	@include mixins.list-inline();
 }
 
 // Text
 .ms-t-lg-r {
-	@include breakpoint( $responsive-menu-break ) {
+	@include mixins.breakpoint( variables.$responsive-menu-break ) {
 		text-align: right;
 	}
 }

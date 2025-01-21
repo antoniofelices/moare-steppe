@@ -1,3 +1,6 @@
+@use "../variables";
+@use "mixins";
+
 /*
  *
  * Header
@@ -21,7 +24,7 @@
 	// Menu item. li element. current item.
 	.current-menu-item {
 		a {
-			@include borderBB();
+			@include mixins.borderBB();
 		}
 	}
 
@@ -43,7 +46,7 @@
 }
 
 // Desktop displays
-@include breakpoint( $responsive-menu-break ) {
+@include mixins.breakpoint( variables.$responsive-menu-break ) {
 
 	.ms-site-header {
 

@@ -478,7 +478,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--sans-serif-2)",
 					"fontSize": "var(--wp--preset--font-size--base)",
-					"fontWeight": "700"
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)"
 				},
 				":hover": {
 					"border": {
@@ -547,7 +547,7 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--sans-serif-1)",
-					"fontWeight": "700"
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)"
 				}
 			},
 			"link": {

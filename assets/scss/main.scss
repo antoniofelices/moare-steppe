@@ -9,19 +9,19 @@
  * @link    https://studiomoare.com
  */
 
-@import 'variables';
-@import 'plugins/mixins';
+@use 'variables';
+@use 'plugins/mixins';
 
-@import 'plugins/accessibility';
-@import 'plugins/html';
-@import 'plugins/type';
-@import 'plugins/structure';
-@import 'plugins/header';
-@import 'plugins/footer';
-@import 'plugins/classes';
-@import 'plugins/classes-wordpress';
-@import 'plugins/forms';
-@import 'plugins/tables';
-@import 'plugins/comments';
-@import 'plugins/pages';
-@import 'plugins/plugins';
+@use 'plugins/accessibility';
+@use 'plugins/html';
+@use 'plugins/type';
+@use 'plugins/structure';
+@use 'plugins/header';
+@use 'plugins/footer';
+@use 'plugins/classes';
+@use 'plugins/classes-wordpress';
+@use 'plugins/forms';
+@use 'plugins/tables';
+@use 'plugins/comments';
+@use 'plugins/pages';
+@use 'plugins/plugins';

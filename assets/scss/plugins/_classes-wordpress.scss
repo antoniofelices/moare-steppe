@@ -1,3 +1,6 @@
+@use "../variables";
+@use "mixins";
+
 /*
  *
  * Classes WordPress
@@ -34,24 +37,24 @@ a.alignright {
 img.centered,
 .aligncenter {
 	display: block;
-	margin: 0 auto $magic-number;
+	margin: 0 auto variables.$magic-number;
 }
 
 img.alignnone,
 .alignnone {
-	margin-bottom: calc($magic-number / 2);
+	margin-bottom: calc(variables.$magic-number / 2);
 }
 
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
-	margin: 0 $gutter $magic-number 0;
+	margin: 0 variables.$gutter variables.$magic-number 0;
 }
 
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
-	margin: 0 0 $magic-number $gutter;
+	margin: 0 0 variables.$magic-number variables.$gutter;
 }
 
 .wp-caption-text {
@@ -71,7 +74,7 @@ img.alignright,
 	.wp-audio-shortcode,
 	.wp-playlist,
 	.wp-video {
-		margin: 0 0 $magic-number;
+		margin: 0 0 variables.$magic-number;
 	}
 }
 
@@ -82,7 +85,7 @@ img.alignright,
 
 .gallery-item {
 	float: left;
-	margin: 0 0 $magic-number;
+	margin: 0 0 variables.$magic-number;
 	text-align: center;
 }
 
@@ -121,8 +124,8 @@ img.alignright,
 .gallery img {
 	height: auto;
 	width: auto;
-	padding: calc($gutter / 2);
-	@include borderB();
+	padding: calc(variables.$gutter / 2);
+	@include mixins.borderB();
 }
 
 .gallery-caption {
@@ -135,11 +138,11 @@ img.alignright,
 }
 
 .alignleft .avatar {
-	margin-left: $gutter;
+	margin-left: variables.$gutter;
 }
 
 .alignright .avatar {
-	margin-left: $gutter;
+	margin-left: variables.$gutter;
 }
 
 // Comments

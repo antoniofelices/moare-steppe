@@ -1,3 +1,5 @@
+@use "../variables";
+
 /*
  *
  * Type
@@ -17,8 +19,8 @@
 
 ol,
 ul {
-	margin-bottom: $magic-number;
-	padding-left: $gutter;
+	margin-bottom: variables.$magic-number;
+	padding-left: variables.$gutter;
 	ol,
 	ul {
 		margin-bottom: 0;

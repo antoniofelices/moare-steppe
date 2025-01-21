@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "../variables";
+
 /*
  *
  * Mixins
@@ -6,12 +11,12 @@
 
 // Media Queries
 @mixin breakpoint( $breakpoint ) {
-	@if map-has-key( $breakpoints, $breakpoint) {
-		@media ( min-width: #{ map-get( $breakpoints, $breakpoint ) }) {
+	@if map.has-key( variables.$breakpoints, $breakpoint) {
+		@media ( min-width: #{ map.get( variables.$breakpoints, $breakpoint ) }) {
 			@content;
 		}
 	}
-	@else if type_of( $breakpoint)==number and unit( $breakpoint)==px or unit( $breakpoint)==em or unit( $breakpoint)==rem {
+	@else if meta.type_of( $breakpoint)==number and math.unit( $breakpoint)==px or math.unit( $breakpoint)==em or math.unit( $breakpoint)==rem {
 		@media (min-width: $breakpoint) {
 			@content;
 		}
@@ -59,39 +64,39 @@
 	@include breakpoint( md ) {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: $grid-max-width-md;
+		max-width: variables.$grid-max-width-md;
 		width: 100%;
 	}
 	@include breakpoint( lg ){
-		max-width: $grid-max-width-lg;
+		max-width: variables.$grid-max-width-lg;
 	}
 	@include breakpoint( xl ){
-		max-width: $grid-max-width-xl;
+		max-width: variables.$grid-max-width-xl;
 	}
 	@include breakpoint( 2xl ){
-		max-width: $grid-max-width-2xl;
+		max-width: variables.$grid-max-width-2xl;
 	}
 	@include breakpoint( 3xl ){
-		max-width: $grid-max-width-3xl;
+		max-width: variables.$grid-max-width-3xl;
 	}
 }
 
 // Narrow
 @mixin narrow() {
-	@include breakpoint( $responsive-menu-break ){
+	@include breakpoint( variables.$responsive-menu-break ){
 		margin-left: auto;
 		margin-right: auto;
-		width: calc($gutter * 45);
+		width: calc(variables.$gutter * 45);
 	}
 }
 
 // Narrow with out margin
 @mixin narrow-without-margins() {
 	@include breakpoint( md ){
-		max-width: calc($gutter * 45);
+		max-width: calc(variables.$gutter * 45);
 	}
-	@include breakpoint( $responsive-menu-break ){
-		max-width: calc($gutter * 60);
+	@include breakpoint( variables.$responsive-menu-break ){
+		max-width: calc(variables.$gutter * 60);
 	}
 }
 
@@ -112,7 +117,7 @@
 		display: inline-block;
 		list-style: none;
 		+ li {
-			margin-left: calc($gutter / 2);
+			margin-left: calc(variables.$gutter / 2);
 		}
 	}
 }
@@ -132,12 +137,12 @@
 	border-collapse: collapse;
 	border-spacing: 0;
 	empty-cells: show;
-	margin-bottom: $magic-number;
-	margin-top: $magic-number;
+	margin-bottom: variables.$magic-number;
+	margin-top: variables.$magic-number;
 	width: 100%;
 	td,
 	th {
-		padding: calc($magic-number / 4) $gutter;
+		padding: calc(variables.$magic-number / 4) variables.$gutter;
 		@include borderB( $color: var(--wp--preset--color--gray-light) );
 	}
 	th {

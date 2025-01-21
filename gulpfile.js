@@ -22,7 +22,7 @@ gulp.task('watch', function(){
 // Default.
 gulp.task('default', gulp.series('watch'));
 
-// Build. Same main css file, just .min for production
+// Build. Same main css file, just minify for production
 gulp.task('build', function(){
     return gulp.src('./assets/scss/main.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))

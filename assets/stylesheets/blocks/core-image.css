@@ -1,0 +1,15 @@
+.wp-block-image.is-style-diagonal-top {
+	position: relative;
+}
+
+.wp-block-image.is-style-diagonal-top:after {
+	background-color: var(--wp--preset--color--background);
+	content: " ";
+	height: 50px;
+	position: absolute;
+	/* transform: skewY(-3.33deg); */
+	top: 0;
+	right: 0;
+	width: 50px;
+	z-index: 0;
+}

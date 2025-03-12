@@ -9,7 +9,7 @@
  * @since   1.0.0
  * @license GPL-2.0+
  * @link    http://studiomoare.com/
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 /**
@@ -155,6 +155,11 @@ if ( ! function_exists( 'moare_steppe_register_block_styles' ) ) :
 			'label'        => __( 'Diagonal top', 'moare-steppe' )
 		) );
 
+		register_block_style( 'core/paragraph', array(
+			'name'         => 'paragraph-featured',
+			'label'        => __( 'Featured Paragraph', 'moare-steppe' )
+		) );
+
 	}
 	add_action( 'init', 'moare_steppe_register_block_styles' );
 
@@ -182,9 +187,71 @@ if ( ! function_exists( 'moare_steppe_enqueue_block_styles' ) ) :
 			'src'    => get_theme_file_uri( 'assets/stylesheets/blocks/core-image.css' ),
 			'path'   => get_theme_file_path( 'assets/stylesheets/blocks/core-image.css' )
 		) );
+	
+		wp_enqueue_block_style( 'core/paragraph', array(
+			'handle' => 'moare-stepp-block-paragraph',
+			'src'    => get_theme_file_uri( 'assets/stylesheets/blocks/core-paragraph.css' ),
+			'path'   => get_theme_file_path( 'assets/stylesheets/blocks/core-paragraph.css' )
+		) );
 
 	}
 	add_action( 'init', 'moare_steppe_enqueue_block_styles' );
+
+endif;
+
+/**
+ * Hide main title pages.
+ *
+ * @since 1.0.2
+ *
+ * @return $editor_settings
+ */
+if ( is_admin() && ! function_exists( 'moare_steppe_hide_main_title_page' ) ) :
+
+	function moare_steppe_hide_main_title_page( $editor_settings ) {
+
+		$current_screen = get_current_screen();
+
+		if( 
+			$current_screen &&
+			$current_screen->base === 'post' &&
+			$current_screen->post_type === 'page'
+		) {
+
+			$css = '.edit-post-visual-editor__post-title-wrapper {
+				display: none;
+			}';
+			$editor_settings['styles'][] = array( 'css' => $css );
+		
+		}
+
+		return $editor_settings;
+
+	}
+
+	add_filter( 'block_editor_settings_all', 'moare_steppe_hide_main_title_page' );
+
+endif;
+
+/**
+ * Add title to pages.
+ *
+ * @since 1.0.2
+ *
+ * @return $content
+ */
+if ( ! function_exists( 'moare_steppe_add_default_content_page' ) ) :
+
+	function moare_steppe_add_default_content_page($content, $post) {
+
+		if ($post->post_type === 'page') {
+			$content = '<!-- wp:post-title {"level":1} /-->';
+		}
+		return $content;
+	
+	}
+
+	add_filter( 'default_content', 'moare_steppe_add_default_content_page', 10, 2 );
 
 endif;
 

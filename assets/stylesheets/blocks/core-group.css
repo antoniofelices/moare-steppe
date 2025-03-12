@@ -1,0 +1,27 @@
+.wp-block-group.is-style-diagonal {
+	position: relative;
+}
+.wp-block-group.is-style-diagonal:before {
+	content: "";
+	background-color: var(--wp--preset--color--background);
+	height: 9rem;
+	position: absolute;
+	transform: skewY(-3.33deg);
+	top: -3rem;
+	right: 0;
+	left: 0;
+	width: 100%;
+	z-index: 0;
+}
+.wp-block-group.is-style-diagonal:after {
+	content: "";
+	background-color: var(--wp--preset--color--background);
+	height: 9rem;
+	position: absolute;
+	transform: skewY(-3.33deg);
+	bottom: -3rem;
+	right: 0;
+	left: 0;
+	width: 100%;
+	z-index: 0;
+}

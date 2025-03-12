@@ -1,11 +1,21 @@
-<!-- wp:group {"tagName":"div","style":{"position":{"type":"sticky","top":"0px"}},"className":"ms-site-header","layout":{"type":"default"}} -->
-<div class="wp-block-group ms-site-header">
-	<!-- wp:template-part {"slug":"header","theme":"moare-steppe"} /-->
-</div>
-<!-- /wp:group -->
+<?php
+/**
+ * Title: Main Archive Default 
+ * Slug: moare-steppe/main-archive-default
+ * Categories: moarepatterns
+ * Description: The main of archives default
+ * Keywords: Content
+ */
+?>
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|200","bottom":"var:preset|spacing|200"}}},"className":"ms-content"} -->
 <main class="wp-block-group ms-content" style="margin-top:var(--wp--preset--spacing--200);margin-bottom:var(--wp--preset--spacing--200)">
+	<!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group">
+		<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
+		<!-- wp:term-description {"fontSize":"large"} /-->
+	</div>
+	<!-- /wp:group -->
 	<!-- wp:query {"layout":{"type":"constrained"},"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true}} -->
 	<div class="wp-block-query">
 		<!-- wp:post-template {"className":"list-entries-default"} -->
@@ -30,5 +40,3 @@
 	<!-- /wp:query -->
 </main>
 <!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"ms-site-footer"} /-->

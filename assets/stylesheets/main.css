@@ -1,0 +1,731 @@
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/**
+ * Moare Steppe.
+ *
+ * This file adds variables to sass.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Mixins
+ *
+ */
+.ms-dontshow {
+  position: absolute !important;
+  top: -9999rem;
+  left: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+table td,
+table th {
+  padding: 0.25rem 1rem;
+  border: 1px solid var(--wp--preset--color--gray-light);
+}
+table th {
+  background-color: var(--wp--preset--color--gray-dark);
+  color: var(--wp--preset--color--white);
+  font-weight: var(--wp--custom--typography--font-weight--bold);
+  text-align: left;
+}
+
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Accessibility. Genesis accessibility.
+ * If add_theme_support genesis-accessibility
+ *
+ */
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+  border: 0;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.search input[type=submit]:focus,
+.widget_search input[type=submit]:focus {
+  clip-path: none;
+  height: auto;
+  width: auto;
+  position: static;
+  display: block;
+  font-size: var(--wp--preset--font-size--base);
+  font-weight: var(--wp--custom--typography--font-weight--bold);
+  padding: 0.5rem 1rem;
+  color: var(--wp--preset--color--gray-dark);
+  background: var(--wp--preset--color--white);
+  z-index: 100000; /* Above WP toolbar. */
+  text-decoration: none;
+  box-shadow: 0 0 2px 2px rgba(var(--wp--preset--color--black), 0.6);
+}
+
+.more-link {
+  position: relative;
+}
+
+:focus {
+  outline: 1px dotted var(--wp--preset--color--link-color);
+}
+
+/*
+ *
+ * HTML
+ *
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  vertical-align: middle;
+}
+
+address {
+  font-style: normal;
+}
+
+figure {
+  margin-right: 0;
+  margin-left: 0;
+  max-width: 100%;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+}
+summary::marker {
+  content: "";
+}
+summary:focus {
+  outline: none;
+}
+summary:after {
+  content: "+";
+}
+
+details[open] summary:after {
+  content: "-";
+}
+
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Type
+ *
+ */
+ol,
+ul {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0;
+}
+
+/*
+ *
+ * Structure
+ *
+ */
+main {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .ms-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .ms-wrap {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .ms-wrap {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .ms-wrap {
+    max-width: 1536px;
+  }
+}
+@media (min-width: 1700px) {
+  .ms-wrap {
+    max-width: 1700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ms-narrow {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .ms-narrow-without-margins {
+    max-width: 45rem;
+  }
+}
+@media (min-width: 1024px) {
+  .ms-narrow-without-margins {
+    max-width: 60rem;
+  }
+}
+
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Header
+ *
+ */
+.ms-site-header .wp-block-site-title a:hover, .ms-site-header .wp-block-site-title a:active, .ms-site-header .wp-block-site-title a:focus {
+  text-decoration: none;
+}
+.ms-site-header .wp-block-site-title a:focus {
+  outline: none;
+}
+.ms-site-header .current-menu-item a {
+  border-bottom: 1px solid currentColor;
+}
+.ms-site-header a.wp-block-navigation-item__content {
+  text-decoration: none;
+}
+.ms-site-header a.wp-block-navigation-item__content:hover, .ms-site-header a.wp-block-navigation-item__content:active, .ms-site-header a.wp-block-navigation-item__content:focus {
+  text-decoration: none;
+}
+.ms-site-header a.wp-block-navigation-item__content:focus {
+  outline: none;
+}
+
+.ms-site-header.scrolled {
+  background-color: var(--wp--preset--color--white);
+}
+
+@media (min-width: 1024px) {
+  .ms-site-header .wp-block-site-title a:hover, .ms-site-header .wp-block-site-title a:active, .ms-site-header .wp-block-site-title a:focus {
+    text-decoration: none;
+  }
+  .ms-site-header .wp-block-site-title a:focus {
+    outline: none;
+  }
+  .ms-site-header a.wp-block-navigation-item__content {
+    text-decoration: none;
+  }
+  .ms-site-header a.wp-block-navigation-item__content:hover, .ms-site-header a.wp-block-navigation-item__content:active, .ms-site-header a.wp-block-navigation-item__content:focus {
+    text-decoration: none;
+  }
+  .ms-site-header a.wp-block-navigation-item__content:focus {
+    outline: none;
+  }
+}
+/*
+ *
+ * Footer
+ *
+ */
+.ms-site-footer {
+  margin-top: 0;
+  overflow: hidden;
+}
+
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Custom classes
+ *
+ */
+.ms-align-superposition .wp-block-column {
+  display: grid;
+  place-items: center;
+  grid-template-areas: "mssame";
+}
+.ms-align-superposition .wp-block-column figure, .ms-align-superposition .wp-block-column h2 {
+  grid-area: mssame;
+}
+
+.ms-align-center {
+  display: grid;
+  place-items: center;
+}
+@media (min-width: 1024px) {
+  .ms-align-center {
+    display: inherit;
+  }
+}
+
+.ms-clearfix:before, .ms-clearfix:after {
+  content: " ";
+  display: table;
+}
+.ms-clearfix:after {
+  clear: both;
+}
+
+.ms-contains-image {
+  display: block;
+}
+.ms-contains-image:hover, .ms-contains-image:active, .ms-contains-image:focus {
+  border: none;
+}
+
+.ms-list-unstyled {
+  margin-left: 0;
+  padding-left: 0;
+}
+.ms-list-unstyled li {
+  list-style: none;
+}
+
+.ms-list-inline {
+  margin: 0;
+  padding: 0;
+}
+.ms-list-inline li {
+  display: inline-block;
+  list-style: none;
+}
+.ms-list-inline li + li {
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .ms-t-lg-r {
+    text-align: right;
+  }
+}
+
+.ms-mn {
+  position: relative;
+  z-index: 99;
+}
+
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Classes WordPress
+ *
+ */
+a.aligncenter img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a.alignnone {
+  display: inline-block;
+}
+
+.alignleft {
+  float: left;
+  text-align: left;
+}
+
+.alignright {
+  float: right;
+  text-align: right;
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+  max-width: 100%;
+}
+
+img.centered,
+.aligncenter {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+img.alignnone,
+.alignnone {
+  margin-bottom: 0.5rem;
+}
+
+a.alignleft,
+img.alignleft,
+.wp-caption.alignleft {
+  margin: 0 1rem 1rem 0;
+}
+
+a.alignright,
+img.alignright,
+.wp-caption.alignright {
+  margin: 0 0 1rem 1rem;
+}
+
+.wp-caption-text {
+  font-size: var(--wp--preset--font-size--small);
+  text-align: center;
+}
+
+.entry-content p.wp-caption-text {
+  margin-bottom: 0;
+}
+
+.sticky {
+  display: block;
+}
+
+.entry-content .wp-audio-shortcode,
+.entry-content .wp-playlist,
+.entry-content .wp-video {
+  margin: 0 0 1rem;
+}
+
+.gallery {
+  overflow: hidden;
+}
+
+.gallery-item {
+  float: left;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  width: 33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  width: 16.6666%;
+}
+
+.gallery-columns-7 .gallery-item {
+  width: 14.2857%;
+}
+
+.gallery-columns-8 .gallery-item {
+  width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  width: 11.1111%;
+}
+
+.gallery img {
+  height: auto;
+  width: auto;
+  padding: 0.5rem;
+  border: 1px solid currentColor;
+}
+
+.gallery-caption {
+  display: block;
+}
+
+.avatar {
+  float: right;
+}
+
+.alignleft .avatar {
+  margin-left: 1rem;
+}
+
+.alignright .avatar {
+  margin-left: 1rem;
+}
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Forms
+ *
+ */
+input,
+select,
+textarea {
+  background-color: var(--wp--preset--color--white);
+  border-radius: 0;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--wp--preset--color--gray-lighter);
+}
+
+input::-moz-placeholder, input::-webkit-input-placeholder, input::-ms-input-placeholder, input::placeholder,
+textarea::-moz-placeholder,
+textarea::-webkit-input-placeholder,
+textarea::-ms-input-placeholder,
+textarea::placeholder {
+  color: #a39da3;
+  opacity: 1;
+}
+
+input[type=checkbox],
+input[type=image],
+input[type=radio] {
+  width: auto;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.widget_search form {
+  position: relative;
+}
+.widget_search input[type=search] {
+  padding-right: 6rem;
+}
+.widget_search input[type=submit] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.search-form {
+  position: relative;
+}
+.search-form input[type=search] {
+  padding-right: 6rem;
+}
+.search-form input[type=submit] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/*
+ *
+ * Tables
+ *
+ */
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Comments.
+ *
+ */
+.entry-comments ol {
+  margin-left: 0;
+  padding-left: 0;
+}
+.entry-comments ol li {
+  list-style: none;
+}
+.entry-comments .comment-header {
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.entry-comments .comment-author {
+  margin: 0;
+}
+.entry-comments .comment .avatar {
+  float: left;
+  margin: 0 1rem 0 0;
+}
+.entry-comments .says {
+  font-size: var(--wp--preset--font-size--small);
+  margin: 0;
+}
+.entry-comments .comment-meta {
+  font-size: var(--wp--preset--font-size--small);
+  margin: 0;
+}
+.entry-comments .comment-edit-link {
+  font-size: var(--wp--preset--font-size--small);
+  margin: 0;
+}
+.entry-comments .comment-reply {
+  clear: both;
+}
+.entry-comments .pingback {
+  margin-bottom: 1rem;
+}
+.entry-comments .comment > article {
+  margin-bottom: 1rem;
+}
+.entry-comments ul.children {
+  margin-left: 1rem;
+}
+
+.comment-respond .comment-reply-title > small,
+.comment-respond .logged-in-as {
+  font-size: var(--wp--preset--font-size--small);
+}
+
+/**
+ * Moare Steppe.
+ *
+ * This file adds styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Pages
+ *
+ */
+@media (min-width: 1024px) {
+  body.page-template-page-header-inverse .ms-site-header,
+  body.page-template-page-landing .ms-site-header {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  body.page-template-page-header-inverse .ms-site-header.scrolled,
+  body.page-template-page-landing .ms-site-header.scrolled {
+    background-color: var(--wp--preset--color--white);
+  }
+}
+/*
+ *
+ * Plugins
+ *
+ */

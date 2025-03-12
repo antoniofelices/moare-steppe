@@ -1,0 +1,123 @@
+/**
+ * Moare Steppe.
+ *
+ * This file adds block editor styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/**
+ * Moare Steppe.
+ *
+ * This file adds variables to sass.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/**
+ * Moare Steppe.
+ *
+ * This file adds block editor styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Mixins
+ *
+ */
+.ms-dontshow {
+  position: absolute !important;
+  top: -9999rem;
+  left: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/**
+ * Moare Steppe.
+ *
+ * This file adds block editor styles.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+/*
+ *
+ * Custom classes
+ *
+ */
+.ms-align-superposition .wp-block-column {
+  display: grid;
+  place-items: center;
+  grid-template-areas: "mssame";
+}
+.ms-align-superposition .wp-block-column figure, .ms-align-superposition .wp-block-column h2 {
+  grid-area: mssame;
+}
+
+.ms-align-center {
+  display: grid;
+  place-items: center;
+}
+@media (min-width: 1024px) {
+  .ms-align-center {
+    display: inherit;
+  }
+}
+
+.ms-clearfix:before, .ms-clearfix:after {
+  content: " ";
+  display: table;
+}
+.ms-clearfix:after {
+  clear: both;
+}
+
+.ms-contains-image {
+  display: block;
+}
+.ms-contains-image:hover, .ms-contains-image:active, .ms-contains-image:focus {
+  border: none;
+}
+
+.ms-list-unstyled {
+  margin-left: 0;
+  padding-left: 0;
+}
+.ms-list-unstyled li {
+  list-style: none;
+}
+
+.ms-list-inline {
+  margin: 0;
+  padding: 0;
+}
+.ms-list-inline li {
+  display: inline-block;
+  list-style: none;
+}
+.ms-list-inline li + li {
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .ms-t-lg-r {
+    text-align: right;
+  }
+}
+
+.ms-mn {
+  position: relative;
+  z-index: 99;
+}

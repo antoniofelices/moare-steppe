@@ -5,7 +5,7 @@
 node_modules/
 
 # Dist dir
-assets/stylesheets/
+# assets/stylesheets/
 
 # Others
 .DS_Store

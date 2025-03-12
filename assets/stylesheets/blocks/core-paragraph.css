@@ -1,0 +1,5 @@
+.is-style-paragraph-featured {
+	font-size: var(--wp--preset--font-size--medium);
+	line-height: var(--wp--custom--typography--line-height--medium);
+	padding-bottom: var(--wp--custom--magic-number--1);
+}

@@ -17,12 +17,17 @@
 // 	}
 // }
 
+// Increase reading size on large screens to keep ~75 chars per line.
+main .wp-block-post-content {
+  font-size: clamp(1.125rem, calc(0.75rem + 0.75vw), 1.75rem);
+}
+
 ol,
 ul {
-	margin-bottom: variables.$magic-number;
-	padding-left: variables.$gutter;
-	ol,
-	ul {
-		margin-bottom: 0;
-	}
+  margin-bottom: variables.$magic-number;
+  padding-left: variables.$gutter;
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
 }

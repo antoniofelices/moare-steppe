@@ -15,10 +15,10 @@
 		<!-- wp:list {"style":{"typography":{"textDecoration":"none"},"elements":{"link":{"color":{"text":"var:preset|color|gray-darker"}}}},"className":"ms-list-inline no-text-decoration","fontSize":"small"} -->
 		<ul style="text-decoration:none" class="ms-list-inline no-text-decoration has-link-color has-small-font-size">
 			<!-- wp:list-item -->
-			<li><a href="#">Privacy policy</a></li>
+			<li><a href="#"><?php esc_html_e( 'Privacy policy', 'moare-steppe' ); ?></a></li>
 			<!-- /wp:list-item -->
 			<!-- wp:list-item -->
-			<li>Lorem Ipsum</li>
+			<li><?php esc_html_e( 'Cookies policy', 'moare-steppe' ); ?></li>
 			<!-- /wp:list-item -->
 		</ul>
 		<!-- /wp:list -->

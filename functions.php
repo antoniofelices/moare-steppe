@@ -58,12 +58,11 @@ if ( ! function_exists( 'moare_steppe_enqueue_scripts_styles' ) ) :
 		$css_file = $is_dev ? 'main.css' : 'main.min.css';
 
 		// Register theme main scripts.
-		wp_enqueue_script(
+		wp_enqueue_script_module(
 			'moare-steppe-script',
 			get_template_directory_uri() . '/assets/js/main.js',
 			array(),
-			$version_string,
-			true
+			$version_string
 		);
 
 		// Register theme default stylesheet.

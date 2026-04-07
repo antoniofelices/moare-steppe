@@ -1,11 +1,11 @@
-# Sass cache
-.sass-cache/
-
 # Node modules
 node_modules/
 
 # Dist dir
 # assets/stylesheets/
+assets/stylesheets/main.css.map
+assets/stylesheets/main.css
+assets/stylesheets/main.min.css
 
 # Others
 .DS_Store

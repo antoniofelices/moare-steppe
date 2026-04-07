@@ -1,0 +1,24 @@
+/**
+ * Moare Steppe.
+ *
+ * @package moare-steppe
+ * @author  Antonio
+ * @license GPL-2.0+
+ * @link    https://studiomoare.com
+ */
+
+@layer accessibility, html, type, structure, header, footer, classes, classes-wordpress, forms, tables, comments, pages, plugins;
+
+@import url("./accessibility.css") layer(accessibility);
+@import url("./html.css") layer(html);
+@import url("./type.css") layer(type);
+@import url("./structure.css") layer(structure);
+@import url("./header.css") layer(header);
+@import url("./footer.css") layer(footer);
+@import url("./classes.css") layer(classes);
+@import url("./classes-wordpress.css") layer(classes-wordpress);
+@import url("./forms.css") layer(forms);
+@import url("./tables.css") layer(tables);
+@import url("./comments.css") layer(comments);
+@import url("./pages.css") layer(pages);
+@import url("./plugins.css") layer(plugins);

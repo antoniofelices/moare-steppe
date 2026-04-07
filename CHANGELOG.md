@@ -9,6 +9,9 @@
 ### Added
 
 - Lightning CSS.
+- BrowserSync.
+- ChokidarCLI.
+- Run All.
 
 ### Remove
 

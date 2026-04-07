@@ -4,9 +4,16 @@
   "version": "2.0.0",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "build": "lightningcss --bundle --minify assets/stylesheets/main.css -o assets/stylesheets/main.min.css"
+    "build:css": "lightningcss --bundle --minify assets/stylesheets/src/main.css -o assets/stylesheets/main.min.css",
+    "build:css:dev": "lightningcss --bundle --sourcemap assets/stylesheets/src/main.css -o assets/stylesheets/main.css",
+    "watch:css": "chokidar \"assets/stylesheets/src/**/*.css\" \"assets/stylesheets/blocks/**/*.css\" --ignore \"assets/stylesheets/main.css\" --ignore \"assets/stylesheets/main.min.css\" -c \"npm run build:css:dev\"",
+    "watch:serve": "browser-sync start --proxy \"prueba.local\" --files \"assets/stylesheets/main.css, **/*.php\" --reload-delay 300",
+    "dev": "run-p watch:css watch:serve"
   },
   "devDependencies": {
-    "lightningcss-cli": "^1.32.0"
+    "browser-sync": "^3.0.4",
+    "chokidar-cli": "^3.0.0",
+    "lightningcss-cli": "^1.32.0",
+    "npm-run-all2": "^8.0.4"
   }
 }

@@ -1,20 +1,20 @@
 /**
- * Remove anchor border hover, anchor contain images.
+ * Add class to anchor elements that contain images.
  */
-(function($) {
-
-	$('img').parent('a').addClass('contains-image');
-
-})(jQuery);
+document.querySelectorAll("a > img").forEach((img) => {
+  img.parentElement.classList.add("contains-image")
+})
 
 /**
- * Add class main header.
+ * Add class to main header on scroll.
  */
-(function($) {
+const msHeader = document.querySelector(".ms-site-header")
 
-	$(document).scroll(function(){
-		var $nav = $(".ms-site-header");
-		$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-	})
-
-})(jQuery);
+if (msHeader) {
+  document.addEventListener("scroll", () => {
+    msHeader.classList.toggle(
+      "scrolled",
+      window.scrollY > msHeader.offsetHeight,
+    )
+  })
+}

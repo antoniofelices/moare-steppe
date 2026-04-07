@@ -1,0 +1,21 @@
+/*
+ *
+ * Pages
+ *
+ */
+
+@media (min-width: 1024px) {
+	body.page-template-page-header-inverse .ms-site-header,
+	body.page-template-page-landing .ms-site-header {
+		background-color: transparent;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	body.page-template-page-header-inverse .ms-site-header.scrolled,
+	body.page-template-page-landing .ms-site-header.scrolled {
+		background-color: var(--wp--preset--color--white);
+	}
+}

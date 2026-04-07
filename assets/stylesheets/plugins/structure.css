@@ -1,0 +1,52 @@
+/*
+ *
+ * Structure
+ *
+ */
+
+main {
+	margin-top: 0;
+}
+
+.ms-wrap {
+	@media (min-width: 768px) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 768px;
+		width: 100%;
+	}
+
+	@media (min-width: 1024px) {
+		max-width: 1024px;
+	}
+
+	@media (min-width: 1280px) {
+		max-width: 1280px;
+	}
+
+	@media (min-width: 1536px) {
+		max-width: 1536px;
+	}
+
+	@media (min-width: 1700px) {
+		max-width: 1700px;
+	}
+}
+
+.ms-narrow {
+	@media (min-width: 1024px) {
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(var(--wp--custom--magic-number--1) * 45);
+	}
+}
+
+.ms-narrow-without-margins {
+	@media (min-width: 768px) {
+		max-width: calc(var(--wp--custom--magic-number--1) * 45);
+	}
+
+	@media (min-width: 1024px) {
+		max-width: calc(var(--wp--custom--magic-number--1) * 60);
+	}
+}

@@ -36,21 +36,20 @@ figure {
 summary {
 	display: flex;
 	justify-content: space-between;
+
 	&::marker {
 		content: '';
 	}
+
 	&:focus {
 		outline: none;
 	}
+
 	&:after {
 		content: '+';
 	}
 }
 
-details[open] {
-	summary {
-		&:after {
-			content: '-';
-		}
-	}
+details[open] summary:after {
+	content: '-';
 }

@@ -1,5 +1,17 @@
 # Moare Steppe Changelog
 
+## [2.0.0] - 2026-04-07
+
+### Changed
+
+- The SASS files to CSS files.
+
+### Remove
+
+- jQuery dependency.
+- Gulp.
+- SASS.
+
 ## [1.0.3] - 2026-03-25
 
 ### Changed

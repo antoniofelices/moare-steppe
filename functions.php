@@ -9,7 +9,7 @@
  * @since   1.0.0
  * @license GPL-2.0+
  * @link    http://studiomoare.com/
- * @version 1.0.3
+ * @version 2.0.0
  */
 
 /**
@@ -56,7 +56,7 @@ if ( ! function_exists( 'moare_steppe_enqueue_scripts_styles' ) ) :
 		wp_enqueue_script(
 			'moare-steppe-script',
 			get_template_directory_uri() . '/assets/js/main.js',
-			array('jquery'),
+			array(),
 			$version_string,
 			true
 		);

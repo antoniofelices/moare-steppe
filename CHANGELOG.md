@@ -6,6 +6,10 @@
 
 - The SASS files to CSS files.
 
+### Added
+
+- Lightning CSS.
+
 ### Remove
 
 - jQuery dependency.

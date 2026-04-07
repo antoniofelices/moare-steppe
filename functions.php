@@ -52,6 +52,11 @@ if ( ! function_exists( 'moare_steppe_enqueue_scripts_styles' ) ) :
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
 
+		// Theme css.
+    	$env = wp_get_environment_type();
+    	$is_dev = in_array($env, ['local', 'development', 'staging'], true);
+		$css_file = $is_dev ? 'main.css' : 'main.min.css';
+
 		// Register theme main scripts.
 		wp_enqueue_script(
 			'moare-steppe-script',
@@ -72,7 +77,7 @@ if ( ! function_exists( 'moare_steppe_enqueue_scripts_styles' ) ) :
 		// Register theme main stylesheet.
 		wp_enqueue_style(
 			'moare-steppe-style',
-			get_template_directory_uri() . '/assets/stylesheets/main.css',
+			get_template_directory_uri() . '/assets/stylesheets/' . $css_file,
 			array(),
 			$version_string
 		);

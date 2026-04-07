@@ -1,0 +1,67 @@
+/*
+ *
+ * Header
+ *
+ */
+
+.ms-site-header {
+	& .wp-block-site-title a:hover,
+	& .wp-block-site-title a:active,
+	& .wp-block-site-title a:focus {
+		text-decoration: none;
+	}
+
+	& .wp-block-site-title a:focus {
+		outline: none;
+	}
+
+	& .current-menu-item a {
+		border-bottom: 1px solid currentColor;
+	}
+
+	& a.wp-block-navigation-item__content {
+		text-decoration: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.ms-site-header.scrolled {
+	background-color: var(--wp--preset--color--white);
+}
+
+@media (min-width: 1024px) {
+	.ms-site-header {
+		& .wp-block-site-title a:hover,
+		& .wp-block-site-title a:active,
+		& .wp-block-site-title a:focus {
+			text-decoration: none;
+		}
+
+		& .wp-block-site-title a:focus {
+			outline: none;
+		}
+
+		& a.wp-block-navigation-item__content {
+			text-decoration: none;
+
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: none;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}

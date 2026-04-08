@@ -170,6 +170,9 @@
       "contentSize": "min(90vw, 1024px)",
       "wideSize": "90vw"
     },
+    "position": {
+      "sticky": true
+    },
     "spacing": {
       "blockGap": true,
       "customSpacingSize": false,
